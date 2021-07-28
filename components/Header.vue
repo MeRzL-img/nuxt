@@ -1,0 +1,75 @@
+<template lang="html">
+    <header class="header">
+        <div class="wrapper wrapper--header">
+            <img src="~/assets/img/header/logo.png" alt="логотип" class="header__logo">
+            <nav class="menu">
+                <a v-for="i of 5" :key="i" href="#home" class="link">Home</a>
+            </nav>
+            <form action="https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp">
+                <button class="header__button" href="">
+                    sign up
+                </button>
+            </form>
+        </div>
+    </header>
+</template>
+<script>
+export default {
+    
+}
+</script>
+<style scoped lang="scss">
+.header {
+    padding-top: 52px;
+}
+
+.wrapper--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    width: 180px;
+}
+
+.link {
+    margin-right: 49px;
+    
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+
+    transition: 0.5s;
+}
+
+.link:hover {
+    color: #061e37;
+}
+
+.link--last {
+    margin-right: 0px;
+}
+
+.header__button {
+    width: 80px;
+    height: 25px;
+
+    font-size: 14px;
+    color: #ffffff;
+
+    border-radius: 5%;
+    border: 1px solid;
+    border-color: #ffffff;
+    border-style: solid;
+    
+    background: Transparent;
+
+    transition: 0.4s;
+}
+
+.header__button:hover {
+    transform: scale(1.2);
+    cursor: pointer
+}
+</style>
