@@ -1,19 +1,32 @@
 <template lang="html">
     <div class="ads__container">
-        <img class="ads__container__img" src="~/assets/img/ads/01.png" alt="фото зданий">
+        <img class="ads__container__img" :src="(icon)" alt="фото зданий">
         <div class="ads__container__text-wrapper">
             <p class="ads__container__text">
-                12000+
+                {{ number }}
             </p>
             <p class="ads__container__text">
-                Business
+                {{ text }}
             </p>
         </div>
     </div>
 </template>
 <script>
 export default {
-    
+    props: {
+        icon: {
+            type: String,
+            default: '',
+        },
+        number: {
+            type: Number,
+            default: '',
+        },
+        text: {
+            type: String,
+            default: '',
+        },
+    },
 }
 </script>
 <style scoped lang="scss">

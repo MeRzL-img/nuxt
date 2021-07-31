@@ -1,24 +1,32 @@
 <template lang="html">
     <div class="extension__name_tables_container name_tables_container">
-        <img src="~/assets/img/extension/1.png" alt="фото парня" class="avatar">
+        <img :src="(avatar)" alt="фото парня" class="avatar">
         <div class="name_tables_container__name_table">
             <h3 class="name_table__name">
-                John Doe
+                {{ name }}
             </h3>
             <p class="name_table__description">
-                Lorem ipsum dolor sit amet, consectetur 
-                adipisicing elit, sed do eiusmod tempor 
-                incididunt ut labore et dolore magna 
-                aliqua. Ut enim ad minim veniam, quis 
-                nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea
+                {{ text }}
             </p>
         </div>
     </div>
 </template>
 <script>
 export default {
-    
+    props: {
+        name: {
+            type: String,
+            default: '',
+        },
+        text: {
+            type: String,
+            default: '',
+        },
+        avatar: {
+            type: String,
+            default: '',
+        },
+    },
 }
 </script>
 <style scoped lang="scss">

@@ -4,15 +4,33 @@
             <div class="nav_container">
                 <img src="~/assets/img/header/logo.png" alt="логотип" class="header__logo">
                 <nav class="menu">
-                    <a v-for="i of 5" :key="i" href="#home" class="link">Home</a>
+                    <a href="#home" class="link">Home</a>
+                    <a href="#Services" class="link">Services</a>
+                    <a href="#Extension" class="link">Extension</a>
+                    <a href="#Team" class="link">Team</a>
                 </nav>
             </div>
             <div class="social_network_container social_network_container--footer">
-                <DNetwork />
-                <DNetwork />
-                <DNetwork />
-                <DNetwork />
-                <DNetwork />
+                <DNetwork 
+                icon="../assets/team/01.png"
+                link="https://twitter.com/?lang=ru"
+            />
+            <DNetwork 
+                icon="../assets/team/02.png"
+                link="https://ru-ru.facebook.com/"
+            />
+            <DNetwork 
+                icon="../assets/team/03.png"
+                link="https://www.linkedin.com/"
+            />
+            <DNetwork 
+                icon="../assets/team/04.png"
+                link="https://www.nba.com/bulls/"
+            />
+            <DNetwork 
+                icon="../assets/team/05.png"
+                link="https://www.behance.net/"
+            />
             </div>
         </div>
     </footer>

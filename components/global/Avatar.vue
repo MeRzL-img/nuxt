@@ -1,9 +1,14 @@
 <template lang="html">
-    <img src="~/assets/img/team/1.jpg" alt="фото девушки слева" class="avatar_container__avatar">
+    <img :src="(avatar)" alt="фото человека" class="avatar_container__avatar">
 </template>
 <script>
 export default {
-    
+    props: {
+        avatar: {
+            type: String,
+            default: '',
+        },
+    },
 }
 </script>
 <style scoped lang="scss">

@@ -1,13 +1,48 @@
 <template lang="html">
     <section class="services">
-        <DTitle class="services__title" />
-        <DTxt class="services__text" />
+        <DTitle class="services__title">
+            Services
+        </DTitle>
+        <DTxt class="services__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        </DTxt>
         <div class="services__tables">
-            <DTable />
-            <DTable />
-            <DTable />
-            <DTable />
-            <DTable class="table__text--down" />
+            <DTable 
+                icon="../assets/img/services/1.png"
+                name="SERVICES"
+                image="../assets/img/services/01.png"
+                text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+                text2="quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
+            />
+            <DTable 
+                icon="../assets/img/services/2.png"
+                name="INBOX"
+                image="../assets/img/services/01.png"
+                text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+                text2="quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
+            />
+            <DTable 
+                icon="../assets/img/services/3.png"
+                name="TEAM"
+                image="../assets/img/services/01.png"
+                text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+                text2="quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
+            />
+            <DTable 
+                icon="../assets/img/services/4.png"
+                name="SETTINGS"
+                image="../assets/img/services/01.png"
+                text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+                text2="quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
+            />
+            <DTable 
+                class="table__text--down"
+                icon="../assets/img/services/5.png"
+                name="FEED"
+                image="../assets/img/services/01.png"
+                text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+                text2="quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
+            />
         </div>
     </section>
 </template>

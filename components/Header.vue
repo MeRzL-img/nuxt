@@ -3,7 +3,10 @@
         <div class="wrapper wrapper--header">
             <img src="~/assets/img/header/logo.png" alt="логотип" class="header__logo">
             <nav class="menu">
-                <a v-for="i of 5" :key="i" href="#home" class="link">Home</a>
+                <a href="#home" class="link">Home</a>
+                <a href="#Services" class="link">Services</a>
+                <a href="#Extension" class="link">Extension</a>
+                <a href="#Team" class="link">Team</a>
             </nav>
             <form action="https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp">
                 <button class="header__button" href="">

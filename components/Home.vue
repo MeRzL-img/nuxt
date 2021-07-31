@@ -1,17 +1,35 @@
 <template lang="html">
     <section class="home">
         <div class="wrapper wrapper--home">
-            <DTitle />
+            <DTitle>
+                Easy & Useful
+            </DTitle>
             <h3 class="home__subtitle">
                 Project Managment Tool
             </h3>
-            <DTxt class="home__text" />
+            <DTxt class="home__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad laboriosam dolores labore provident possimus? Tempora incidunt obcaecati, excepturi dicta ratione nisi totam
+            </DTxt>
             <div class="wrapper--row">
-                <DProfession />
-                <DProfession />
-                <DProfession />
+                <DProfession
+                    avatar="../assets/img/home/calendar.png"
+                    title="Title Goes Here"
+                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nulla vitae numquam perspiciatis quod! Sequi modi magnam unde delectus nulla, quia"
+                />
+                <DProfession
+                    avatar="../assets/img/home/human.png"
+                    title="Title Goes Here"
+                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nulla vitae numquam perspiciatis quod! Sequi modi magnam unde delectus nulla, quia"
+                />
+                <DProfession
+                    avatar="../assets/img/home/working.png"
+                    title="Title Goes Here"
+                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nulla vitae numquam perspiciatis quod! Sequi modi magnam unde delectus nulla, quia"
+                />
             </div>
-            <DButton class="home__button" />
+            <DButton class="home__button">
+                GET STARTED
+            </DButton>
         </div>    
     </section>    
 </template>

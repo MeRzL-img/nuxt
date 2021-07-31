@@ -14,8 +14,12 @@
                         voluptatum perferendis tempore placea
                     </p>
                     <form action="https://aliexpress.ru/" class="form">
-                        <DButton class="main__button main__button--left" />
-                        <DButton class="main__button main__button--right" />
+                        <DButton class="main__button main__button--left">
+                            BUY NOW
+                        </DButton>
+                        <DButton class="main__button main__button--right">
+                            TRY FOR FREE
+                        </DButton>
                     </form>
                 </div>
                 <div class="video">

@@ -1,19 +1,46 @@
 <template lang="html">
     <section class="team">
-        <DTitle class="team__title" />
-        <DTxt class="team__text team__text--top" />
+        <DTitle class="team__title">
+            Our Team
+        </DTitle>
+        <DTxt class="team__text team__text--top">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        </DTxt>
         <div class="team__avatar_container avatar_container">
-            <DAvatar />
-            <DAvatar />
-            <DAvatar />
+            <DAvatar 
+                avatar="../assets/img/team/1.jpg"
+            />
+            <DAvatar 
+                avatar="../assets/img/team/2.jpg"
+            />
+            <DAvatar 
+                avatar="../assets/img/team/3.jpg"
+            />
         </div>
-        <DTxt class="team__text team__text--bottom" />
+        <DTxt class="team__text team__text--bottom">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+        </DTxt>    
         <div class="social_network_container">
-            <DNetwork />
-            <DNetwork />
-            <DNetwork />
-            <DNetwork />
-            <DNetwork />
+            <DNetwork 
+                icon="../assets/team/01.png"
+                link="https://twitter.com/?lang=ru"
+            />
+            <DNetwork 
+                icon="../assets/team/02.png"
+                link="https://ru-ru.facebook.com/"
+            />
+            <DNetwork 
+                icon="../assets/team/03.png"
+                link="https://www.linkedin.com/"
+            />
+            <DNetwork 
+                icon="../assets/team/04.png"
+                link="https://www.nba.com/bulls/"
+            />
+            <DNetwork 
+                icon="../assets/team/05.png"
+                link="https://www.behance.net/"
+            />
         </div>
     </section>
 </template>

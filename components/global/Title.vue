@@ -1,6 +1,6 @@
 <template lang="html">
     <h2 class="title">
-        Easy & Useful
+        <slot/>
     </h2>
 </template>
 <script>

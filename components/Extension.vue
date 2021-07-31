@@ -2,15 +2,30 @@
     <section class="extension">
         <div class="wrapper wrapper--extension">
             <div class="extension__container extension__container--left">
-                <DTitle class="extension__title" />
-                <DTxt class="extension__text" />
+                <DTitle class="extension__title">
+                    What our customers have to say about us.
+                </DTitle>
+                <DTxt class="extension__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                </DTxt>
                 <form class="extension__form" action="http://snake.io/">
-                    <DButton class="extension__form__button" />
+                    <DButton class="extension__form__button">
+                        GET STARTED
+                    </DButton>
                 </form>
             </div>
             <div class="extension__container extension__container--right">
-                <DName />
-                <DName class="extension__name_tables_container--down" />
+                <DName 
+                    name="John Doe" 
+                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea"
+                    avatar="../assets/img/extension/1.png"
+                />
+                <DName 
+                    name="Khalessi" 
+                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea" 
+                    avatar="../assets/img/extension/2.png"
+                    class="extension__name_tables_container--down"
+                />
             </div>
         </div>
     </section>

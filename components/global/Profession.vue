@@ -1,18 +1,28 @@
 <template lang="html">
     <div class="column">
-        <img class="column__icon" src="~/assets/img/home/calendar.png" alt="иконка календаря">
-        <h2 class="column__title">Title Goes Here</h2>
+        <img class="column__icon" :src="(avatar)" alt="иконка">
+        <h2 class="column__title">{{ title }}</h2>
         <p class="column__text">
-            Lorem ipsum dolor sit amet, consectetur 
-            adipisicing elit. Minus nulla vitae numquam 
-            perspiciatis quod! Sequi modi magnam unde 
-            delectus nulla, quia
+            {{ text }}
         </p>
     </div>
 </template>
 <script>
 export default {
-    
+    props: {
+        avatar: {
+            type: String,
+            default: '',
+        },
+        title: {
+            title: String,
+            default: '',
+        },
+        text: {
+            text: String,
+            default: '',
+        },
+    },
 }
 </script>
 <style scoped lang="scss">

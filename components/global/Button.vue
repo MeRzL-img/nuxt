@@ -1,10 +1,12 @@
 <template lang="html">
     <button class="button">
-        BUY NOW
+        <slot />
     </button>
 </template>
 <script>
-export default {}
+export default {
+
+}
 </script>
 <style scoped lang="scss">
 .button {

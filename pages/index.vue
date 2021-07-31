@@ -12,7 +12,7 @@
 <script>
 import DMain from '~/components/Main.vue'
 import DHome from '~/components/Home.vue'
-import DAdvertising from '~/components/Ads.vue'
+import DAdvertising from '~/components/Statistic.vue'
 import DServices from '~/components/Services.vue'
 import DExtension from '~/components/Extension.vue'
 import DTeam from '~/components/Team.vue'
