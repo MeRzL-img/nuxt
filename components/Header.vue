@@ -3,10 +3,17 @@
         <div class="wrapper wrapper--header">
             <img src="~/assets/img/header/logo.png" alt="логотип" class="header__logo">
             <nav class="menu">
-                <a href="#home" class="link">Home</a>
-                <a href="#Services" class="link">Services</a>
+                <a 
+                    v-for="navitationItem of navigations"
+                    :key="navitationItem.href"
+                    
+                    :href="navitationItem.href" 
+                    :class="navitationItem.class">
+                        Home
+                </a>
+                <!-- <a href="#Services" class="link">Services</a>
                 <a href="#Extension" class="link">Extension</a>
-                <a href="#Team" class="link">Team</a>
+                <a href="#Team" class="link">Team</a> -->
             </nav>
             <form action="https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp">
                 <button class="header__button" href="">
@@ -18,7 +25,28 @@
 </template>
 <script>
 export default {
-    
+    data() {
+        return {
+            navigations: [
+                {
+                    href: '#home',
+                    class: 'link',
+                },
+                {
+                    href: '#Services',
+                    class: 'link',
+                },
+                {
+                    href: '#Extension',
+                    class: 'link',
+                },
+                {
+                    href: '#Team',
+                    class: 'link',
+                },
+            ]
+        }
+    },
 }
 </script>
 <style scoped lang="scss">

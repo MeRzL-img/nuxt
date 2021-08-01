@@ -4,10 +4,14 @@
             <div class="nav_container">
                 <img src="~/assets/img/header/logo.png" alt="логотип" class="header__logo">
                 <nav class="menu">
-                    <a href="#home" class="link">Home</a>
-                    <a href="#Services" class="link">Services</a>
-                    <a href="#Extension" class="link">Extension</a>
-                    <a href="#Team" class="link">Team</a>
+                    <a 
+                    v-for="navitationItem of navigations"
+                    :key="navitationItem.href"
+                    
+                    :href="navitationItem.href" 
+                    :class="navitationItem.class">
+                        Home
+                </a>
                 </nav>
             </div>
             <div class="social_network_container social_network_container--footer">
@@ -50,6 +54,24 @@ export default {
                 {
                     icon: require('../assets/img/team/05.png'),
                     link: 'https://www.behance.net/'
+                },
+            ],
+            navigations: [
+                {
+                    href: '#home',
+                    class: 'link',
+                },
+                {
+                    href: '#Services',
+                    class: 'link',
+                },
+                {
+                    href: '#Extension',
+                    class: 'link',
+                },
+                {
+                    href: '#Team',
+                    class: 'link',
                 },
             ]
         }
