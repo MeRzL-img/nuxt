@@ -96,6 +96,10 @@ export default {
     text-align: start;
 }
 
+.table__text--down {
+    margin-top: 20px;
+}
+
 .table__footer {
     display: flex;
 }
@@ -105,5 +109,11 @@ export default {
     
     margin-left: 25px;
     margin-bottom: 25px;
+}
+
+@media (max-width: 780px) {
+    .table__img {
+        display: none;
+    }
 }
 </style>

@@ -8,40 +8,14 @@
         </DTxt>
         <div class="services__tables">
             <DTable 
-                icon="../assets/img/services/1.png"
-                name="SERVICES"
-                image="../assets/img/services/01.png"
-                text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
-                text2="quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
-            />
-            <DTable 
-                icon="../assets/img/services/2.png"
-                name="INBOX"
-                image="../assets/img/services/01.png"
-                text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
-                text2="quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
-            />
-            <DTable 
-                icon="../assets/img/services/3.png"
-                name="TEAM"
-                image="../assets/img/services/01.png"
-                text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
-                text2="quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
-            />
-            <DTable 
-                icon="../assets/img/services/4.png"
-                name="SETTINGS"
-                image="../assets/img/services/01.png"
-                text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
-                text2="quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
-            />
-            <DTable 
-                class="table__text--down"
-                icon="../assets/img/services/5.png"
-                name="FEED"
-                image="../assets/img/services/01.png"
-                text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
-                text2="quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
+                v-for="tableItem of tables"
+                :key="tableItem.name"
+
+                :icon="tableItem.icon"
+                :name="tableItem.name"
+                :image="tableItem.image"
+                :text1="tableItem.text1"
+                :text2="tableItem.text2"
             />
         </div>
     </section>
@@ -55,7 +29,48 @@ export default {
         DTitle,
         DTxt,
         DTable,
-    }
+    },
+    data() {
+        return {
+            tables: [
+                {
+                    icon: require('../assets/img/services/1.png'),
+                    name: 'SERVICES',
+                    image: require('../assets/img/services/01.png'),
+                    text1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+                    text2: 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+                },
+                {
+                    icon: require('../assets/img/services/2.png'),
+                    name: 'INBOX',
+                    image: require('../assets/img/services/01.png'),
+                    text1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+                    text2: 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+                },
+                {
+                    icon: require('../assets/img/services/3.png'),
+                    name: 'TEAM',
+                    image: require('../assets/img/services/01.png'),
+                    text1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+                    text2: 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+                },
+                {
+                    icon: require('../assets/img/services/4.png'),
+                    name: 'SETTINGS',
+                    image: require('../assets/img/services/01.png'),
+                    text1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+                    text2: 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+                },
+                {
+                    icon: require('../assets/img/services/5.png'),
+                    name: 'FEED',
+                    image: require('../assets/img/services/01.png'),
+                    text1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+                    text2: 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in'
+                },
+            ]
+        }
+    },
 }
 </script>
 <style scoped lang="scss">
@@ -84,4 +99,61 @@ export default {
 .table__text--down {
     margin-top: 25px;
 }
+
+@media (max-width: 980px) {
+    .table {
+        width: 760px;
+    }
+}
+
+@media (max-width: 780px) {
+    .services {
+        height: auto;
+    }
+
+    .table {
+        width: 300px;
+    }
+
+    .table__img {
+        display: none;
+    }
+
+    .text__wrapper {
+        margin-bottom: 10px;
+    }
+
+    .services__tables {
+        margin-bottom: 10px;
+    }
+}
 </style>
+    <!-- <DTable 
+        icon="../assets/img/services/2.png"
+        name="INBOX"
+        image="../assets/img/services/01.png"
+        text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+        text2="quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
+    />
+    <DTable 
+        icon="../assets/img/services/3.png"
+        name="TEAM"
+        image="../assets/img/services/01.png"
+        text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+        text2="quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
+    />
+    <DTable 
+        icon="../assets/img/services/4.png"
+        name="SETTINGS"
+        image="../assets/img/services/01.png"
+        text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+        text2="quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
+    />
+    <DTable 
+        class="table__text--down"
+        icon="../assets/img/services/5.png"
+        name="FEED"
+        image="../assets/img/services/01.png"
+        text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+        text2="quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
+    /> -->

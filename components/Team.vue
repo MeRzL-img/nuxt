@@ -8,13 +8,10 @@
         </DTxt>
         <div class="team__avatar_container avatar_container">
             <DAvatar 
-                avatar="../assets/img/team/1.jpg"
-            />
-            <DAvatar 
-                avatar="../assets/img/team/2.jpg"
-            />
-            <DAvatar 
-                avatar="../assets/img/team/3.jpg"
+                v-for="avatarItem of avatars"
+                :key="avatarItem.avatar"
+
+                :avatar="avatarItem.avatar"
             />
         </div>
         <DTxt class="team__text team__text--bottom">
@@ -22,24 +19,11 @@
         </DTxt>    
         <div class="social_network_container">
             <DNetwork 
-                icon="../assets/team/01.png"
-                link="https://twitter.com/?lang=ru"
-            />
-            <DNetwork 
-                icon="../assets/team/02.png"
-                link="https://ru-ru.facebook.com/"
-            />
-            <DNetwork 
-                icon="../assets/team/03.png"
-                link="https://www.linkedin.com/"
-            />
-            <DNetwork 
-                icon="../assets/team/04.png"
-                link="https://www.nba.com/bulls/"
-            />
-            <DNetwork 
-                icon="../assets/team/05.png"
-                link="https://www.behance.net/"
+                v-for="networkItem of networks"
+                :key="networkItem.link"
+                
+                :icon="networkItem.icon"
+                :link="networkItem.link"
             />
         </div>
     </section>
@@ -55,7 +39,44 @@ export default {
         DTxt,
         DAvatar,
         DNetwork,
-    }
+    },
+    data() {
+        return {
+            avatars: [
+                {
+                    avatar: require('../assets/img/team/1.jpg')
+                },
+                {
+                    avatar: require('../assets/img/team/2.jpg')
+                },
+                {
+                    avatar: require('../assets/img/team/3.jpg')
+                },
+            ],
+            networks: [
+                {
+                    icon: require('../assets/img/team/01.png'),
+                    link: 'https://twitter.com/?lang=ru'
+                },
+                {
+                    icon: require('../assets/img/team/02.png'),
+                    link: 'https://ru-ru.facebook.com/'
+                },
+                {
+                    icon: require('../assets/img/team/03.png'),
+                    link: 'https://www.linkedin.com/'
+                },
+                {
+                    icon: require('../assets/img/team/04.png'),
+                    link: 'https://www.nba.com/bulls/'
+                },
+                {
+                    icon: require('../assets/img/team/05.png'),
+                    link: 'https://www.behance.net/'
+                },
+            ]
+        }
+    },
 }
 </script>
 <style scoped lang="scss">
@@ -110,4 +131,46 @@ export default {
     display: flex;
     justify-content: space-between;
 }
+
+@media (max-width: 780px) {
+    .team__avatar_container {
+        margin: 50px 0;
+        width: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team__text {
+        width: auto;
+        max-width: 460px;
+    }
+
+    .team {
+        padding-bottom: 20px;
+    }
+}
 </style>
+    <!-- <DAvatar 
+        avatar="../assets/img/team/2.jpg"
+    />
+    <DAvatar 
+        avatar="../assets/img/team/3.jpg"
+    /> -->
+    <!-- <DNetwork 
+        icon="../assets/team/02.png"
+        link="https://ru-ru.facebook.com/"
+    />
+    <DNetwork 
+        icon="../assets/team/03.png"
+        link="https://www.linkedin.com/"
+    />
+    <DNetwork 
+        icon="../assets/team/04.png"
+        link="https://www.nba.com/bulls/"
+    />
+    <DNetwork 
+        icon="../assets/team/05.png"
+        link="https://www.behance.net/"
+    /> -->

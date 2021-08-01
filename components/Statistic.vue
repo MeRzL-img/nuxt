@@ -1,12 +1,15 @@
 <template lang="html">
     <section class="ads">
         <DStats
-            class="ads__container--cyan" 
-            icon="../assets/img/ads/01.png"
-            number="12000+"
-            text="Business"
+            v-for="statisticItem of statistics"
+            :key="statisticItem.text"
+
+            :class="`ads__container--${statisticItem.class}`" 
+            :icon="statisticItem.icon"
+            :number="statisticItem.number"
+            :text="statisticItem.text"
         />
-        <DStats 
+        <!-- <DStats 
             class="ads__container--blue" 
             icon="../assets/img/ads/02.png"
             number="60000+"
@@ -23,7 +26,7 @@
             icon="../assets/img/ads/04.png"
             number="40000+"
             text="Pro Users"
-        />
+        /> -->
     </section>
 </template>
 <script>
@@ -31,7 +34,37 @@ import DStats from '~/components/global/Stats.vue'
 export default {
     components: {
         DStats,
-    }
+    },
+    data() {
+        return {
+            statistics: [
+                {
+                    class: 'cyan',
+                    icon: require('../assets/img/ads/01.png'),
+                    number: '12000+',
+                    text: 'Business'
+                },
+                {
+                    class: 'blue',
+                    icon: require('../assets/img/ads/02.png'),
+                    number: '60000+',
+                    text: 'Downloads'
+                },
+                {
+                    class: 'purple',
+                    icon: require('../assets/img/ads/03.png'),
+                    number: '30000+',
+                    text: 'Free Installs'
+                },
+                {
+                    class: 'pink',
+                    icon: require('../assets/img/ads/04.png'),
+                    number: '40000+',
+                    text: 'Pro Users'
+                },
+            ]
+        }
+    },
 }
 </script>
 <style scoped lang="scss">
@@ -56,5 +89,11 @@ export default {
 
 .ads__container--pink {
     background: #ea80fc;
+}
+
+@media (max-width: 1170px) {
+    .ads {
+        display: none;
+    }
 }
 </style>

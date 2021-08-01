@@ -75,4 +75,15 @@ export default {
     transform: scale(1.2);
     cursor: pointer
 }
+
+@media (max-width: 780px) {
+    .wrapper--header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu {
+        display: none;
+    }
+}
 </style>

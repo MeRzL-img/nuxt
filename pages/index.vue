@@ -53,4 +53,26 @@ a {
     margin: 0px auto;
     padding: 0px 15px;
 }
+
+
+@media (max-width: 1170px) {
+    .wrapper {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 980px) {
+    .wrapper {
+        max-width: 768px;
+    }
+}
+
+@media (max-width: 780px) {
+    .wrapper {
+        max-width: none;
+        
+        display: flex;
+        flex-direction: column;    
+    }
+}
 </style>

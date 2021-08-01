@@ -11,25 +11,12 @@
                 </nav>
             </div>
             <div class="social_network_container social_network_container--footer">
-                <DNetwork 
-                icon="../assets/team/01.png"
-                link="https://twitter.com/?lang=ru"
-            />
             <DNetwork 
-                icon="../assets/team/02.png"
-                link="https://ru-ru.facebook.com/"
-            />
-            <DNetwork 
-                icon="../assets/team/03.png"
-                link="https://www.linkedin.com/"
-            />
-            <DNetwork 
-                icon="../assets/team/04.png"
-                link="https://www.nba.com/bulls/"
-            />
-            <DNetwork 
-                icon="../assets/team/05.png"
-                link="https://www.behance.net/"
+                v-for="networkItem of networks"
+                :key="networkItem.link"
+                
+                :icon="networkItem.icon"
+                :link="networkItem.link"
             />
             </div>
         </div>
@@ -40,7 +27,33 @@ import DNetwork from '~/components/global/Network.vue'
 export default {
     components: {
         DNetwork,
-    }
+    },
+    data() {
+        return {
+            networks: [
+                {
+                    icon: require('../assets/img/team/01.png'),
+                    link: 'https://twitter.com/?lang=ru'
+                },
+                {
+                    icon: require('../assets/img/team/02.png'),
+                    link: 'https://ru-ru.facebook.com/'
+                },
+                {
+                    icon: require('../assets/img/team/03.png'),
+                    link: 'https://www.linkedin.com/'
+                },
+                {
+                    icon: require('../assets/img/team/04.png'),
+                    link: 'https://www.nba.com/bulls/'
+                },
+                {
+                    icon: require('../assets/img/team/05.png'),
+                    link: 'https://www.behance.net/'
+                },
+            ]
+        }
+    },
 }
 </script>
 <style scoped lang="scss">
@@ -83,5 +96,17 @@ export default {
 
 .social_network_container--footer {
     float: right;
+}
+
+@media (max-width: 780px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        display: none;
+    }
 }
 </style>

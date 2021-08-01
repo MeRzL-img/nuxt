@@ -16,15 +16,13 @@
             </div>
             <div class="extension__container extension__container--right">
                 <DName 
-                    name="John Doe" 
-                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea"
-                    avatar="../assets/img/extension/1.png"
-                />
-                <DName 
-                    name="Khalessi" 
-                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea" 
-                    avatar="../assets/img/extension/2.png"
-                    class="extension__name_tables_container--down"
+                    v-for="nameTableItem of nameTables"
+                    :key="nameTableItem.name"
+                    
+                    :name="nameTableItem.name" 
+                    :text="nameTableItem.text"
+                    :avatar="nameTableItem.avatar"
+                    :class="nameTableItem.class"
                 />
             </div>
         </div>
@@ -41,6 +39,23 @@ export default {
         DTxt,
         DButton,
         DName,
+    },
+    data() {
+        return {
+            nameTables: [
+                {
+                    name: 'Jhon Doe',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea',
+                    avatar: require('../assets/img/extension/1.png')
+                },
+                {
+                    name: 'Khalessi',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea',
+                    avatar: require('../assets/img/extension/2.png'),
+                    class: 'extension__name_tables_container--down'
+                },
+            ]
+        }
     }
 }
 </script>
@@ -108,4 +123,56 @@ export default {
 .extension__name_tables_container--down {
     margin-top: 70px;
 }
+
+@media (max-width: 1170px) {
+    .extension {
+        height: auto;
+
+        padding-bottom: 10px;
+    }
+
+    .wrapper--extension {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .extension__container--right {
+        margin-top: 40px;
+    }
+
+    .name_tables_container__name_table {
+        text-align: start;
+    }
+}
+
+@media (max-width: 980px) {
+    .extension__text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 780px) {
+    .extension__container--right {
+        display: none;
+    }
+
+    .extension__title {
+        width: auto;
+        max-width: 460px;
+    }
+
+    .extension__text {
+        width: auto;
+        max-width: 460px;
+    }
+
+}
 </style>
+    <!-- <DName 
+        name="Khalessi" 
+        text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea" 
+        avatar="../assets/img/extension/2.png"
+        class="extension__name_tables_container--down"
+    /> -->

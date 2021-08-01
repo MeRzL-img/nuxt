@@ -136,4 +136,66 @@ export default {
 
     background: #ffffff;
 }
+
+
+@media (max-width: 1170px) {
+.video {
+        width: 500px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 980px) {
+    .video {
+        width: 400px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 780px) {
+    .container--parent {
+        height: 1000px;
+        
+        background-size: auto 1000px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .invitation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        text-align: center;
+    }
+
+    .main__button {
+        width: 130px;
+    }
+    
+    .wrapper--header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .main__button--left {
+        margin-right: 20px;
+    }
+
+    .video {
+        width: 280px;
+        height: 140px;
+
+        margin-top: 50px;
+    }  
+}
 </style>

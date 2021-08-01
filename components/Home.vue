@@ -12,19 +12,12 @@
             </DTxt>
             <div class="wrapper--row">
                 <DProfession
-                    avatar="../assets/img/home/calendar.png"
-                    title="Title Goes Here"
-                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nulla vitae numquam perspiciatis quod! Sequi modi magnam unde delectus nulla, quia"
-                />
-                <DProfession
-                    avatar="../assets/img/home/human.png"
-                    title="Title Goes Here"
-                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nulla vitae numquam perspiciatis quod! Sequi modi magnam unde delectus nulla, quia"
-                />
-                <DProfession
-                    avatar="../assets/img/home/working.png"
-                    title="Title Goes Here"
-                    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nulla vitae numquam perspiciatis quod! Sequi modi magnam unde delectus nulla, quia"
+                    v-for="professionItem of professions"
+                    :key="professionItem.avatar"
+
+                    :avatar="professionItem.avatar"
+                    :title="professionItem.title"
+                    :text="professionItem.text"
                 />
             </div>
             <DButton class="home__button">
@@ -44,7 +37,28 @@ export default {
         DTxt,
         DProfession,
         DButton,
-    }
+    },
+    data() {
+        return {
+            professions: [
+                {
+                    avatar: require('../assets/img/home/calendar.png'),
+                    title: 'Title Goes Here',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nulla vitae numquam perspiciatis quod! Sequi modi magnam unde delectus nulla, quia'
+                },
+                {
+                    avatar: require('../assets/img/home/human.png'),
+                    title: 'Title Goes Here',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nulla vitae numquam perspiciatis quod! Sequi modi magnam unde delectus nulla, quia'
+                },
+                {
+                    avatar: require('../assets/img/home/working.png'),
+                    title: 'Title Goes Here',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nulla vitae numquam perspiciatis quod! Sequi modi magnam unde delectus nulla, quia'
+                },
+            ]
+        }
+    },
 }
 </script>
 <style scoped lang="scss">
@@ -98,4 +112,29 @@ export default {
 
     transition: 0.5s;
 }
+
+@media (max-width: 980px) {
+    .home {
+        height: 1040px;
+    }
+
+    .wrapper--row {
+        height: 650px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
 </style>
+    <!-- <DProfession
+        avatar="../assets/img/home/human.png"
+        title="Title Goes Here"
+        text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nulla vitae numquam perspiciatis quod! Sequi modi magnam unde delectus nulla, quia"
+    />
+    <DProfession
+        avatar="../assets/img/home/working.png"
+        title="Title Goes Here"
+        text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nulla vitae numquam perspiciatis quod! Sequi modi magnam unde delectus nulla, quia"
+    /> -->
