@@ -14,12 +14,31 @@
                         voluptatum perferendis tempore placea
                     </p>
                     <form action="https://aliexpress.ru/" class="form">
-                        <DButton class="main__button main__button--left">
+                        <v-btn
+                            class="main__button main__button--left"
+                            elevation="2"
+                            x-large
+                            color="#061e37"
+                            min-height="55px"
+                        >
                             BUY NOW
-                        </DButton>
-                        <DButton class="main__button main__button--right">
+                        </v-btn>
+                        <v-btn
+                            class="main__button main__button--right"
+                            elevation="2"
+                            x-large
+                            color="#ffffff"
+                            min-height="55px"
+                        >
                             TRY FOR FREE
-                        </DButton>
+                        </v-btn>
+                        <!-- <DButton class="main__button main__button--left">
+                            BUY NOW
+                        </DButton> -->
+
+                        <!-- <DButton class="main__button main__button--right">
+                            TRY FOR FREE
+                        </DButton> -->
                     </form>
                 </div>
                 <div class="video">
@@ -44,6 +63,7 @@ export default {
 <style scoped lang="scss">
 .container--parent {
     height: 750px;
+    max-width: 100%;
     
     background-image: url('~/assets/img/backgrounds/bg_header_and_main.jpg');
     background-repeat: no-repeat;
@@ -91,35 +111,36 @@ export default {
 
 .main__button {
     height: 55px;
-
-    border-radius: 5%;
+    
     border: none;
 
     font-size: 14px;
 
     transition: 0.4s;
+    z-index: 10;
 }
 
-.main__button:hover {
-    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-    cursor: pointer
-}
+// .main__button:hover {
+//     box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+//     cursor: pointer
+// }
 
 .main__button--left {
-    width: 150px;
+    max-width: 150px;
     
-    color: #eef0f2;
+    color: #ffffff;
 
-    background: #061e37;
+    background-color: #061e37;
 }
 
 .main__button--right {
-    width: 160px;
+    max-width: 160px;
+    height: 55px;
     
     color: #061e37;
     font-weight: bold;
 
-    background: #ffffff;
+    background-color: #ffffff;
 }
 
 .video {

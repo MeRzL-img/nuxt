@@ -1,5 +1,30 @@
 <template lang="html">
-    <details class="table services__tables__table">
+    <v-row justify="center">
+        <v-expansion-panels accordion>
+            <v-expansion-panel 
+                class="table services__tables__table"
+            >
+                <v-expansion-panel-header class="table__title__container">
+                    <img class="table__icon" :src="(icon)" alt="иконка">
+                    <h3 class="table__title">
+                        {{ name }}
+                    </h3>
+                </v-expansion-panel-header>
+                <v-expansion-panel-content class="table__footer">
+                    <img class="table__img" :src="(image)" alt="книжка с аайфоном">
+                    <span class="text__wrapper">
+                        <p class="text table__text">
+                            {{ text1 }} 
+                        </p>        
+                        <p class="text table__text table__text--down">
+                            {{ text2 }}
+                        </p>
+                    </span>
+                </v-expansion-panel-content>
+            </v-expansion-panel>
+        </v-expansion-panels>
+    </v-row>
+    <!-- <details class="table services__tables__table">
         <summary class="table__title__container">
             <img class="table__icon" :src="(icon)" alt="иконка">
             <h3 class="table__title">
@@ -17,7 +42,7 @@
                 </p>
             </span>
         </div>
-    </details>
+    </details> -->
 </template>
 <script>
 export default {
@@ -59,9 +84,13 @@ export default {
 
 .table__title__container {
     height: 50px;
+    max-width: 700px;
     
     display: flex;
     align-items: center;
+
+    text-align: start;
+
 }
 
 .table__title__container:hover {
@@ -73,7 +102,8 @@ export default {
 }
 
 .table__icon {
-    width: 18px;
+    max-width: 18px;
+    height: 18px;
     
     margin-left: 20px;
 }
@@ -102,10 +132,11 @@ export default {
 
 .table__footer {
     display: flex;
+    flex-direction: row;
 }
 
 .table__img {
-    width: 250;
+    width: 250px;
     
     margin-left: 25px;
     margin-bottom: 25px;

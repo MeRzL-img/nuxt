@@ -20,9 +20,19 @@
                     :text="professionItem.text"
                 />
             </div>
-            <DButton class="home__button">
+            <v-btn
+                class="home__button"
+                elevation="2"
+                x-large
+                color="#1de9b6"
+                min-height="55px"
+            >
                 GET STARTED
-            </DButton>
+            </v-btn>
+            
+            <!-- <DButton class="home__button">
+                GET STARTED
+            </DButton> -->
         </div>    
     </section>    
 </template>
@@ -98,7 +108,7 @@ export default {
 }
 
 .home__button {
-    width: 150px;
+    max-width: 150px;
     height: 55px;
     
     border-radius: 5%;

@@ -75,7 +75,7 @@ export default {
 </script>
 <style scoped lang="scss">
 .services {
-    max-height: 1400px;
+    max-height: auto;
     
     padding-top: 75px;
     padding-bottom: 20px;

@@ -1,16 +1,17 @@
 <template lang="html">
     <footer class="footer">
-        <div class="wrapper">
+        <div class="wrapper wrapper--footer">
             <div class="nav_container">
                 <img src="~/assets/img/header/logo.png" alt="логотип" class="header__logo">
                 <nav class="menu">
                     <a 
-                    v-for="navitationItem of navigations"
-                    :key="navitationItem.href"
+                        v-for="navitationItem of navigations"
+                        :key="navitationItem.href"
                     
-                    :href="navitationItem.href" 
-                    :class="navitationItem.class">
-                        Home
+                        :href="navitationItem.href" 
+                        :class="navitationItem.class"
+                    >
+                        {{ navitationItem.title }}
                 </a>
                 </nav>
             </div>
@@ -60,18 +61,22 @@ export default {
                 {
                     href: '#home',
                     class: 'link',
+                    title: 'Home'
                 },
                 {
                     href: '#Services',
                     class: 'link',
+                    title: 'Services'
                 },
                 {
                     href: '#Extension',
                     class: 'link',
+                    title: 'Extension'
                 },
                 {
                     href: '#Team',
                     class: 'link',
+                    title: 'Team'
                 },
             ]
         }
@@ -83,8 +88,15 @@ export default {
     height: 150px;
     
     padding-top: 95px;
+
+    display: flex;
+    flex-direction: column;
     
     background-color: #061e37;
+}
+
+.wrapper--footer {
+    width: 1170px;
 }
 
 .nav_container {

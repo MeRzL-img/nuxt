@@ -9,7 +9,7 @@
                     
                     :href="navitationItem.href" 
                     :class="navitationItem.class">
-                        Home
+                        {{ navitationItem.title }}
                 </a>
                 <!-- <a href="#Services" class="link">Services</a>
                 <a href="#Extension" class="link">Extension</a>
@@ -31,18 +31,22 @@ export default {
                 {
                     href: '#home',
                     class: 'link',
+                    title: 'Home'
                 },
                 {
                     href: '#Services',
                     class: 'link',
+                    title: 'Services'
                 },
                 {
                     href: '#Extension',
                     class: 'link',
+                    title: 'Extension'
                 },
                 {
                     href: '#Team',
                     class: 'link',
+                    title: 'Team'
                 },
             ]
         }
