@@ -14,7 +14,7 @@
                         voluptatum perferendis tempore placea
                     </p>
                     <form action="https://aliexpress.ru/" class="form">
-                        <v-btn
+                        <!-- <v-btn
                             class="main__button main__button--left"
                             elevation="2"
                             x-large
@@ -31,14 +31,14 @@
                             min-height="55px"
                         >
                             TRY FOR FREE
-                        </v-btn>
-                        <!-- <DButton class="main__button main__button--left">
+                        </v-btn> -->
+                        <DButton class="main__button main__button--left">
                             BUY NOW
-                        </DButton> -->
+                        </DButton>
 
-                        <!-- <DButton class="main__button main__button--right">
+                        <DButton class="main__button main__button--right">
                             TRY FOR FREE
-                        </DButton> -->
+                        </DButton>
                     </form>
                 </div>
                 <div class="video">
@@ -126,16 +126,35 @@ export default {
 // }
 
 .main__button--left {
-    max-width: 150px;
+    width: 150px;
     
     color: #ffffff;
 
     background-color: #061e37;
 }
 
+.form {
+        ::v-deep {
+            .main__button--left {
+                height: 55px;
+                 
+                background-color: #061e37;
+            }
+
+            .main__button--right {
+                height: 55px;
+            }
+            .v-btn:not(.v-btn--round) {
+                padding: 0;
+            }
+        }
+}
+
 .main__button--right {
-    max-width: 160px;
+    width: 160px;
     height: 55px;
+
+    padding: 0;
     
     color: #061e37;
     font-weight: bold;

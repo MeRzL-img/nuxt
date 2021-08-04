@@ -1,6 +1,5 @@
 <template lang="html">
-    <v-row justify="center">
-        <v-expansion-panels accordion>
+        <v-expansion-panels accordion >
             <v-expansion-panel 
                 class="table services__tables__table"
             >
@@ -23,7 +22,6 @@
                 </v-expansion-panel-content>
             </v-expansion-panel>
         </v-expansion-panels>
-    </v-row>
     <!-- <details class="table services__tables__table">
         <summary class="table__title__container">
             <img class="table__icon" :src="(icon)" alt="иконка">
@@ -75,19 +73,38 @@ export default {
 .table {
     width: 800px;
 
+    display: flex;
+    flex-direction: column;
+    
+
     margin-top: 20px;
 
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 
     border-radius: 10px;
+
+    ::v-deep {
+        .v-expansion-panel-header > *:not(.v-expansion-panel-header__icon) {
+            display:  flex;
+            justify-content:  space-between;
+            text-align: start;
+        }
+        .v-expansion-panel-content__wrap {
+            display: flex;
+            justify-content:  space-between;
+        }
+    }
 }
 
 .table__title__container {
-    height: 50px;
-    max-width: 700px;
+    height: 20px;
+    max-width: 780px;
     
+    padding: 0;
+
     display: flex;
     align-items: center;
+
 
     text-align: start;
 
@@ -103,7 +120,7 @@ export default {
 
 .table__icon {
     max-width: 18px;
-    height: 18px;
+    max-height: 18px;
     
     margin-left: 20px;
 }

@@ -9,7 +9,10 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                 </DTxt>
                 <form class="extension__form" action="http://snake.io/">
-                    <v-btn
+                    <DButton class="extension__form__button">
+                        GET STARTED
+                    </DButton>
+                    <!-- <v-btn
                         class="extension__form__button"
                         elevation="2"
                         x-large
@@ -17,11 +20,7 @@
                         min-height="55px"
                     >
                         GET STARTED
-                    </v-btn>
-                    
-                    <!-- <DButton class="extension__form__button">
-                        GET STARTED
-                    </DButton> -->
+                    </v-btn> -->
                 </form>
             </div>
             <div class="extension__container extension__container--right">
@@ -105,6 +104,17 @@ export default {
 
 .extension__container--left {
     margin-top: 50px;
+}
+
+.extension__form {
+    ::v-deep {
+        .extension__form__button{
+            max-width: 150px;
+            height: 55px;
+            font-size: 15px;
+            background: #061e37;
+        }
+    }
 }
 
 .extension__form__button {

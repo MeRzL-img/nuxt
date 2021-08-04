@@ -1,10 +1,9 @@
 <template lang="html">
     <v-btn
       class="button"
-      elevation="4"
+      elevation="0"
       x-large
 
-      max-width="150px"
       color="none"
     >
         <slot/>

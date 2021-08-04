@@ -20,19 +20,9 @@
                     :text="professionItem.text"
                 />
             </div>
-            <v-btn
-                class="home__button"
-                elevation="2"
-                x-large
-                color="#1de9b6"
-                min-height="55px"
-            >
+            <DButton class="home__button">
                 GET STARTED
-            </v-btn>
-            
-            <!-- <DButton class="home__button">
-                GET STARTED
-            </DButton> -->
+            </DButton>
         </div>    
     </section>    
 </template>
@@ -82,7 +72,18 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;   
+
+    ::v-deep {
+        .home__button {
+            max-width: 150px;
+            height: 55px;
+
+            background: #1de9b6;
+        }
+    }
 }
+
+
 
 .home__subtitle {
     margin-top: 15px;

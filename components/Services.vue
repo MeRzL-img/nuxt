@@ -7,7 +7,9 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
         </DTxt>
         <div class="services__tables">
-            <DTable 
+            <DTable
+                class="services__table"
+
                 v-for="tableItem of tables"
                 :key="tableItem.name"
 
@@ -89,6 +91,10 @@ export default {
     margin-top: 30px;
 
     text-align: center;
+}
+
+.services__table {
+    margin-top: 20px;
 }
 
 .services__tables {

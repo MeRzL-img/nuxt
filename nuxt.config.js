@@ -17,6 +17,12 @@ export default {
   css: [
   ],
 
+  vuetify: {
+    customVariables: ['~/assets/variables.scss'],
+    treeShake: true,
+    // defaultAssets: false,
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
