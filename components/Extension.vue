@@ -109,7 +109,8 @@ export default {
 .extension__form {
     ::v-deep {
         .extension__form__button{
-            max-width: 150px;
+            width: 150px;
+            padding: 0;
             height: 55px;
             font-size: 15px;
             background: #061e37;
